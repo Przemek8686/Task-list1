@@ -3,6 +3,7 @@ const Tasks = ({tasks, hideDoneTasks}) => (
     <ul className="list__tasks">
         {tasks.map(task => (
             <li
+            key={task.id}
                 className={`list__task ${task.done && hideDoneTasks ? " list__task--hidden" : ""
                     }`}
             >

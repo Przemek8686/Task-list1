@@ -2,7 +2,7 @@
 Html, CSS,Java Scrtipt,JSX
 This project was bootstrapped with Create React App.
 ## Demo
-![Lista Zadań]( https://github.com/Przemek8686/Task-list1/blob/a42f6585ca49a5322517f5c66629237489c7d887/public/demo.png)
+![Lista Zadań]( https://github.com/Przemek8686/Todos-list-react/blob/afee907857e489845a441a87b480614d86f0221a/public/demo.png)
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

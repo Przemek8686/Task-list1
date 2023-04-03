@@ -1,10 +1,15 @@
 # Description:
+
 A simple task list where, after entering a task, we can mark it as completed and also remove it from the list. In the form, after adding tasks, two additional buttons appear, thanks to which we can mark all tasks as completed with one click, and we can also hide them.
+
 # Technologies:
+
 Html, CSS,Java Scrtipt,JSX
 This project was bootstrapped with Create React App.
+
 ## Demo
-![Lista Zadań]( https://github.com/Przemek8686/Todos-list-react/blob/afee907857e489845a441a87b480614d86f0221a/public/demo.png)
+
+![Lista Zadań](https://github.com/Przemek8686/Todos-list-react/blob/93cee3325c47db96c386400e056683d771dba8d2/public/demo2.png)
 [link do demo] (https://przemek8686.github.io/Todos-list-react/)
 
 ### Getting Started with Create React App
@@ -22,6 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\

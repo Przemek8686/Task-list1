@@ -49,3 +49,8 @@ export const Button = styled.button`
       }
     `}
 `;
+export const Content = styled.div`
+    ${({ done }) => done && css`
+        text-decoration: line-through;
+    `}
+`;

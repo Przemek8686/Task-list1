@@ -1,91 +1,70 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container";
+import { ThemeProvider } from "styled-components";
 import useTasks from "./useTasks";
 
-const getInitialTasks = () => {
-  const tasksFromLocalStorage = localStorage.getItem("tasks");
-
-  return tasksFromLocalStorage ? JSON.parse(tasksFromLocalStorage) : [];
+const theme = {
+  colors: {
+    done: {
+      display: "hsl(120, 100%, 25%)",
+      hover: "hsl(120, 100%, 28%)",
+      active: "hsl(120, 100%, 31%)",
+    },
+    remove: {
+      display: "hsl(0, 100%, 50%)",
+      hover: "hsl(0, 100%, 62%)",
+      active: "hsl(0, 100%, 68%)",
+    },
+  },
+  breakPoints: {
+    mobiles: 767,
+  },
 };
 
 function App() {
-  const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState(getInitialTasks);
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+  const [hideDone, setHideDone] = useState(
+    
+  );
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
   };
 
-  const removeTask = (id) => {
-    setTasks((tasks) => tasks.filter((task) => task.id !== id));
-  };
+  const { tasks, setAllDone, toggleTaskDone, removeTask, addNewTask } =
+    useTasks();
 
-  const toggleTaskDone = (id) => {
-    setTasks((tasks) =>
-      tasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, done: !task.done };
-        }
-        return task;
-      })
-    );
-  };
-
-  const setAllDone = () => {
-    setTasks((tasks) =>
-      tasks.map((task) => ({
-        ...task,
-        done: true,
-      }))
-    );
-  };
-
-  const addNewTask = (content) => {
-    setTasks((tasks) => [
-      ...tasks,
-      {
-        content,
-        done: false,
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-      },
-    ]);
-  };
   return (
-    <Container>
-      <Header title="Lista Zadań" />
+    <ThemeProvider theme={theme}>
+      <Header title={"Lista zadań"} />
       <Section
-        title="Dodaj Nowe Zadanie"
+        title={"Dodaj nowe zadanie"}
         body={<Form addNewTask={addNewTask} />}
       />
       <Section
-        title="Lista Zadań"
+        title={"Lista zadań"}
         body={
           <Tasks
             tasks={tasks}
             hideDone={hideDone}
-            removeTask={removeTask}
             toggleTaskDone={toggleTaskDone}
+            removeTask={removeTask}
           />
         }
-        extraBodyContent={
+        buttons={
           <Buttons
             tasks={tasks}
             hideDone={hideDone}
+            disabled={tasks.every(({ done }) => done)}
             toggleHideDone={toggleHideDone}
             setAllDone={setAllDone}
           />
         }
       />
-    </Container>
+    </ThemeProvider>
   );
 }
 export default App;

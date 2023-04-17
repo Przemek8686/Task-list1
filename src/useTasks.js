@@ -37,6 +37,9 @@ const useTasks = () => {
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
       },
     ]);
+    const setAllDone = () => {
+      setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
+  };
 
   return {
     tasks,
@@ -44,6 +47,7 @@ const useTasks = () => {
     toggleTaskDone,
     removeTask,
     addNewTask,
+    setAllDone
   };
 };
 export default useTasks;

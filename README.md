@@ -9,7 +9,7 @@ This project was bootstrapped with Create React App.
 
 ## Demo
 
-![Lista Zadań](https://github.com/Przemek8686/Todos-list-react/blob/93cee3325c47db96c386400e056683d771dba8d2/public/demo2.png)
+![Lista Zadań](https://github.com/Przemek8686/Todos-list-react/blob/8238c64dc0408416c910a9088e8e9583bfd0695d/public/demo%20(2).png)
 [link do demo] (https://przemek8686.github.io/Todos-list-react/)
 
 ### Getting Started with Create React App

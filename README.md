@@ -4,8 +4,8 @@ A simple task list where, after entering a task, we can mark it as completed and
 
 # Technologies:
 
-Html, CSS, Java Scrtipt, JSX, Reacts.js, React Hooks, Styled Components
-This project was bootstrapped with Create React App.
+Html, CSS, Java Scrtipt, JSX, Reacts.js, React Hooks, Styled Components.
+
 
 ## Demo
 

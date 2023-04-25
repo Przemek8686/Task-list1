@@ -8,7 +8,10 @@ const Form = ({ addNewTask }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     const trimReadInput = readInput.trim();
-    if (trimReadInput !== "") {
+    
+    if 
+    
+    (trimReadInput !== "") {
       addNewTask(trimReadInput);
       setReadInput("");
     }
@@ -17,6 +20,7 @@ const Form = ({ addNewTask }) => {
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
+      
       <StyledInput
         ref={refInput}
         value={readInput}

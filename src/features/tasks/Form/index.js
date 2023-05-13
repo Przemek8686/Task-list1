@@ -1,9 +1,12 @@
 import { useRef, useState } from "react";
+import {useDispatch} from "react-redux";
+import {nanoid} from "@reduxjs/toolkit";
 import { StyledForm, StyledInput, StyledButton } from "./styled";
 
-const Form = ({ addNewTask }) => {
+const Form = () => {
   const [readInput, setReadInput] = useState("");
   const refInput = useRef(null);
+  const dispatch = useDispatch();
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -11,12 +14,17 @@ const Form = ({ addNewTask }) => {
     
     if 
     
-    (trimReadInput !== "") {
-      addNewTask(trimReadInput);
-      setReadInput("");
-    }
-    refInput.current.focus();
-  };
+    (!trimReadInput) {
+  return;
+  }
+  dispatch(addTask({
+    content:trimReadInput,
+    done:false,
+    id:nanoid(),
+  }));
+  setReadInput("");
+  refInput.current.focus();
+};
 
   return (
     <StyledForm onSubmit={onFormSubmit}>

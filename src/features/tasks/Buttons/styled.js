@@ -1,20 +1,26 @@
 import styled from "styled-components";
+export const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 export const StyledButton = styled.button`
-  padding: 10px;
-  font-size: 18px;
-  transition: 0.5s;
+  transition: filter 0.5s;
   border: none;
-  background-color: white;
-  color: hsl(180, 100%, 30%);
+  background: transparent;
+  color: ${({ theme }) => theme.color.teal};
 
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    flex-basis: 100%;
+    margin: 10px;
+  }
   &:hover {
-    color: hsl(180, 100%, 37%);
+    filter: brightness(100%);
   }
   &:active {
-    color: hsl(180, 100%, 40%);
+    filter: brightness(120%);
   }
   &:disabled {
-    color: grey;
+    color: ${({ theme }) => theme.color.silver};
   }
 `;

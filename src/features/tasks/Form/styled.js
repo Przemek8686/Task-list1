@@ -1,34 +1,32 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
-  padding: 20px;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const StyledInput = styled.input`
   padding: 10px;
-  border: 1px solid hsl(0, 0%, 87%);
-
-  &:focus {
-    border: 2px solid black;
-  }
+  border: 1px solid ${({ theme }) => theme.color.alto};
 `;
 
 export const StyledButton = styled.button`
-  background-color: hsl(180, 100%, 25%);
-  color: white;
   border: none;
   padding: 10px;
-  cursor: pointer;
   transition: 0.3s;
+  background: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.color.white};
 
-  &: hover {
-    background-color: hsl(180, 100%, 30%);
+  &:hover {
+    filter: brightness(100%);
     transform: scale(1.1);
   }
 
   &:active {
-    background: hsl(180, 100%, 36%);
+    filter: brightness(120%);
   }
 `;

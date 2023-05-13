@@ -1,31 +1,30 @@
 import styled from "styled-components";
 
-export const StyledSection = styled.section`
-  background-color: white;
+export const Wrapper = styled.section`
+  background: ${({ theme }) => theme.color.white};
   margin: 10px 0px;
+  box-shadow:0 0 5px ${({ theme }) => theme.color.alto};
 `;
-export const StyledDiv = styled.div`
-display: flex;
-gap: 20px;
-@media (max-width:${({ theme }) => theme.breakPoints.mobiles}px{
-    flex-direction: column;
-}
-`;
+export const Header = styled.header`
+ border-bottom: 1px solid ${({ theme }) => theme.color.alto};
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 
-export const StyledHeader = styled.header`
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: auto auto;
-  margin: 5px 0;
-  padding: 20px 25px;
-  border-bottom: 2px solid #e6e6e6;
-  font-weight: 700;
-
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobiles}px) {
-    geid-template-columns: 1fr;
-  }
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
-export const StyledBody = styled.div`
-  padding: 15px 20px;
+
+export const Title = styled.h2`
+ font-size: 20px;
+    margin: 0%;
+`;
+
+export const SectionBody = styled.div`
+    padding: 20px;
 `;

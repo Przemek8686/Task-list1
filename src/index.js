@@ -1,14 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Tasks from "./features/tasks/Tasks";
+import App from "./App";
 import StyledGlobal from "./styled";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme";
+import store from "./store";
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <StyledGlobal />
-    <Tasks />
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <StyledGlobal />
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
 

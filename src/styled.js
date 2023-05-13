@@ -13,7 +13,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px;
-  background-color:#e6e6e6 ;
+  background-color: ${({ theme }) => theme.color.gallery};
   font-family: Source Sans Pr, sans-serif;
   font-size: 24px;
 }

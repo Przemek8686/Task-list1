@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   padding: 10px;
   background-color:#e6e6e6 ;
-  font-family: 'Source Sans Pr, sans-serif;
+  font-family: Source Sans Pr, sans-serif;
   font-size: 24px;
 }
 `;

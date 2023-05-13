@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Form from "./Form";
-import Tasks from "./Tasks";
+import TaskList from "./TaskList";
 import Buttons from "./Buttons";
-import Section from "./Section";
-import Header from "./Header";
+import Section from "../../common/Section";
+import Header from "../../common/Header";
 import { ThemeProvider } from "styled-components";
-import useTasks from "./useTasks";
+import useTasks from "./TaskList";
 
 const theme = {
   colors: {
@@ -25,10 +25,8 @@ const theme = {
   },
 };
 
-function App() {
-  const [hideDone, setHideDone] = useState(
-    
-  );
+function Tasks() {
+  const [hideDone, setHideDone] = useState();
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
@@ -47,7 +45,7 @@ function App() {
       <Section
         title={"Lista zadań"}
         body={
-          <Tasks
+          <TaskList
             tasks={tasks}
             hideDone={hideDone}
             toggleTaskDone={toggleTaskDone}
@@ -67,4 +65,4 @@ function App() {
     </ThemeProvider>
   );
 }
-export default App;
+export default Tasks;

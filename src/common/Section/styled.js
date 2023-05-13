@@ -7,7 +7,7 @@ export const StyledSection = styled.section`
 export const StyledDiv = styled.div`
 display: flex;
 gap: 20px;
-@media (max-width: ${({ theme }) => theme.breakPoints.mobiles}px{
+@media (max-width:${({ theme }) => theme.breakPoints.mobiles}px{
     flex-direction: column;
 }
 `;

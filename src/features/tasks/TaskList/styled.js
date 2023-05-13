@@ -12,7 +12,7 @@ export const Item = styled.li`
   gap: 10px;
   justify-content: center;
   padding: 10px 10px;
-  border-bottom: 2px solid #e6e6e6;
+  border-bottom: 2px solid ${({theme}) => theme.color.alto};
   ${({ hidden }) =>
     hidden &&
     css`
@@ -21,33 +21,42 @@ export const Item = styled.li`
 `;
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.done.display};
-  color: white;
-  border: none;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.done.hover};
-  }
-  &:active {
-    background-color: ${({ theme }) => theme.colors.done.active};
-  }
-  ${({ remove }) =>
-    remove &&
-    css`
-      background-color: ${({ theme }) => theme.colors.remove.display};
+    border: none;
+    color: ${({ theme }) => theme.color.white};
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transition: filter 0.3s;
 
-      &:hover {
-        background-color: ${({ theme }) => theme.colors.remove.hover};
-      }
-      &:active {
-        background-color: ${({ theme }) => theme.colors.remove.active};
-      }
+    ${({ toggleDone }) => toggleDone && css`
+        background: ${({ theme }) => theme.color.forestGreen};
     `}
+    
+    ${({ remove }) => remove && css`
+        background: ${({ theme }) => theme.color.crimson};
+    `}
+
+    &:hover {
+        filter: brightness(110%);
+    }
+
+    &:active {
+        filter: brightness(120%);
+    }
+`;
+    export const ToggleDoneButton = styled(Button)`
+    background: ${({ theme }) => theme.color.forestGreen};
+
+    &:hover {
+        filter: brightness(110%);
+    }
+`;
+
+    export const RemoveButton = styled(Button)`
+    background-color: ${({ theme }) => theme.color.crimson};
+        &:hover{
+            filter: brightness(110%);
+        }
 `;
 export const Content = styled.div`
     ${({ done }) => done && css`

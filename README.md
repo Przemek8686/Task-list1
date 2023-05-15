@@ -4,7 +4,7 @@ A simple task list where, after entering a task, we can mark it as completed and
 
 # Technologies:
 
-Html, CSS, Java Scrtipt, JSX, Reacts.js, React Hooks, Styled Components.
+Html, CSS, Java Scrtipt, JSX, Reacts.js, React Hooks, Styled Components, React-redux.
 
 
 ## Demo

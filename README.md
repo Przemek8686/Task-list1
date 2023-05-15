@@ -9,7 +9,7 @@ Html, CSS, Java Scrtipt, JSX, Reacts.js, React Hooks, Styled Components, React-r
 
 ## Demo
 
-![Lista Zadań](https://github.com/Przemek8686/Todos-list-react/blob/8238c64dc0408416c910a9088e8e9583bfd0695d/public/demo%20(2).png)
+![Lista Zadań](https://github.com/Przemek8686/Todos-list-react/blob/f6cd807b8ee0e4c631f2ab3a8b76d38704e9eee1/public/demo.png)
 [link do demo] (https://przemek8686.github.io/Todos-list-react/)
 
 ### Getting Started with Create React App

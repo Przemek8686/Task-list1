@@ -6,6 +6,7 @@ import {
   selectHideDone,
   selectIsEveryTaskDone,
   setAllDone,
+  fetchExampleTasks,
 } from "../../tasksSlice";
 
 const Buttons = () => {
@@ -16,6 +17,9 @@ const Buttons = () => {
   return (
     !areTasksEmpty && (
       <Wrapper>
+        <StyledButton onClick={() => dispatch(fetchExampleTasks())}>
+          Pobierz Przykladowe Zadania
+        </StyledButton>
         <StyledButton onClick={() => dispatch(toggleHideDone())}>
           {hideDone ? "Pokaż" : "Ukryj"} Ukończone
         </StyledButton>

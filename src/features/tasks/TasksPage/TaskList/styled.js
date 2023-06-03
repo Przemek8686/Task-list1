@@ -14,7 +14,6 @@ export const Item = styled.li`
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid ${({ theme }) => theme.color.alto};
-
   ${({ hidden }) =>
     hidden &&
     css`
@@ -37,7 +36,6 @@ export const Button = styled.button`
   height: 30px;
   padding: 0;
   transition: filter 0.5s;
-
   ${({ toggleDone }) =>
     toggleDone &&
     css`
@@ -49,11 +47,9 @@ export const Button = styled.button`
     css`
       background-color: ${({ theme }) => theme.color.crimson};
     `}
-
     &:hover {
     filter: brightness(110%);
   }
-
   &:active {
     filter: brightness(120%);
   }
@@ -62,7 +58,6 @@ export const Button = styled.button`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: teal;
-
   &:hover {
     color: hsl(180, 100%, 35%);
   }

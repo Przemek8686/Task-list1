@@ -1,21 +1,11 @@
-import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+const activeClassName = "active";
 
-const StyledGlobal = createGlobalStyle`
-
-html {
-  box-sizing: border-box;
-}
-*, ::after, ::before {
-  box-sizing: inherit;
-}
-
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: ${({ theme }) => theme.color.gallery};
-  font-family: Source Sans Pr, sans-serif;
-  font-size: 24px;
-}
+export const StyledNavLink = styled(NavLink).attrs(() => ({
+  activeClassName,
+}))`
+  &.${activeClassName} {
+    color: red;
+  }
 `;
-export default StyledGlobal;

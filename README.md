@@ -1,15 +1,14 @@
 # Description:
 
-A simple task list where, after entering a task, we can mark it as completed and also remove it from the list. In the form, after adding tasks, two additional buttons appear, thanks to which we can mark all tasks as completed with one click, and we can also hide them.
+A simple task list where, after entering a task, we can mark it as completed and also remove it from the list. In the form, after adding tasks, two additional buttons appear, thanks to which we can mark all tasks as completed with one click, and we can also hide them.In the navigation of the application, we can find a reference to information about the Author and an easy way to return to Tasks. There is also a search engine for filtering tasks on the main page.
 
 # Technologies:
 
-Html, CSS, Java Scrtipt, JSX, Reacts.js, React Hooks, Styled Components, React-redux.
-
+React.js React - Redux React - Ruter Redux Toolkit Custom Hook (useEffect, useState, useRef) Local Storage HTML BEM CSS (Grid, Flex, media queries, transition) JavaScript ES6+ Normalized.css Styled-components Theme Provider GlobalStyles & Theme JSX Git Webpack Babel
 
 ## Demo
 
-![Lista Zadań](https://github.com/Przemek8686/Todos-list-react/blob/f6cd807b8ee0e4c631f2ab3a8b76d38704e9eee1/public/demo.png)
+![Lista Zadań](https://github.com/Przemek8686/Todos-list-react/blob/7a879faf25b7ed4336a63e78c0ff3cd7f9004747/public/demo.png)
 [link do demo] (https://przemek8686.github.io/Todos-list-react/)
 
 ### Getting Started with Create React App

@@ -26,15 +26,14 @@ const AuthorPage = () => ( <
         programowania. { " " } <
         /p>{" "} <
         p > { " " }
-        Interesuje sie { " " } <
-        b > sportem,
+        Interesuje sie { " " } < b > sportem,
         polityka,
-        czytaniem ksiazek oraz muzyka. < /b>{" "} <
-        /p>{" "} <
+        czytaniem ksiazek oraz muzyka. < /b>{" "} < /
+        p > { " " } <
         />
     }
-    />{" "} <
-    /Container>
+    />{" "} < /
+    Container >
 );
 
 export default AuthorPage;
